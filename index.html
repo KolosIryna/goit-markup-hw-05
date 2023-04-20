@@ -64,15 +64,17 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="hero-btn">Order Service</button>
+          <button type="button" class="hero-btn" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
       <!-- Modal window -->
-      <div class="overlay">
+      <div class="overlay" data-modal>
         <div class="modal">
-          <button class="modal-btn" type="button">
-            <svg class="modal-icon" width="24" height="24">
+          <button class="modal-btn" type="button" data-modal-close>
+            <svg class="modal-icon" width="8" height="8">
               <use href=""></use>
             </svg>
           </button>
@@ -585,5 +587,7 @@
         </div>
       </div>
     </footer>
+    <!-- Підключення скрипту для модально вікна -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>
