@@ -161,11 +161,10 @@ img {
   display: flex;
   gap: 40px;
 }
-/* Можна так задати
-.menu .item:not(:last-child) {
-  margin-right: 40px;
-} */
+
 .menu-header {
+  position: relative;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -174,10 +173,35 @@ img {
   color: var(--title-text-color);
 }
 
+.menu-header::after {
+  content: "";
+
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+
+  border-radius: 2px;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-header.activ {
+  color: var(--pressed-state-color);
+}
+.menu-header.activ::after,
+.menu-header:hover::after,
+.menu-header:focus::after {
+  background: var(--pressed-state-color);
+}
+
 .menu .link {
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu .link:hover,
@@ -204,6 +228,8 @@ img {
   padding-bottom: 24px;
 
   color: var(--main-color-text);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list .link:hover,
 .list .link:focus {
@@ -265,6 +291,8 @@ img {
 
   background-color: var(--bgr-btn-color);
   color: var(--withe-text-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -396,6 +424,8 @@ img {
 
   background-color: var(--bgr-btn-color);
   border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus {
@@ -434,6 +464,9 @@ img {
   border-radius: 4px;
 
   color: var(--light-slate);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -475,7 +508,12 @@ img {
 
   background-color: var(--bgr-cloud);
   color: var(--btn-color);
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .btn:hover,
 .btn:focus {
   border: 1px solid transparent;
@@ -502,6 +540,8 @@ img {
 }
 .card-set-link {
   display: block;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-set-link:hover,
 .card-set-link:focus {
@@ -509,9 +549,60 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+/* ---------------------------- */
+.card-box {
+  position: relative;
+}
+.card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* max-width: 296px; */
+  width: 90%;
+  text-align: center;
+  color: var(--footer-text);
+  background: #4d5ae5;
+}
+/* .card-img {
+  position: relative;
+  overflow: hidden;
+}
+.card-img::before {
+  display: inline-block;
+
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: blueviolet;
+
+  opacity: 0;
+
+  transform: translateY(+100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-img:hover::before {
+  opacity: 1;
+}
+.ooooo:hover .card-img::before {
+  transform: translateY(0);
+}
+
+.texttt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+/* --------------------------------- */
 .section-text {
   color: var(--main-color-text);
 }
+
 .card-content {
   padding: 32px 16px;
   border: 1px solid var(--cornflower);
@@ -570,6 +661,9 @@ img {
   color: var(--withe-text-color);
 }
 
+.social-link.soc-footer {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .social-link.soc-footer:hover,
 .social-link.soc-footer:focus {
   background-color: var(--green);
