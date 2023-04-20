@@ -36,6 +36,8 @@
   --light-slate: #8e8f99;
   /* GREEN */
   --green: #31d0aa;
+  /* Dairy */
+  --dairy: #fcfcfc;
   /**
     |============================
     | Others
@@ -301,6 +303,57 @@ img {
 }
 /**
   |============================
+  |     Modal window
+  |============================
+*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  /* max-width: 1440px;
+  height: 677px; */
+
+  background: rgba(46, 47, 66, 0.4);
+}
+.modal {
+  position: absolute;
+  top: calc(50% - 288px);
+  left: calc(50% - 204px);
+
+  width: 408px;
+  min-height: 576px;
+  padding: 24px;
+
+  background: var(--dairy);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.modal-btn {
+  /* position: absolute; */
+
+  display: block;
+  margin-left: auto;
+
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: none;
+
+  background: #e7e9fc;
+
+  cursor: pointer;
+}
+
+.modal-icon {
+}
+/**
+  |============================
   | Section 2 index.html
   |============================
 */
@@ -557,11 +610,12 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
-  /* max-width: 296px; */
-  width: 90%;
-  text-align: center;
+
+  width: 100%;
+  padding: 40px 32px 164px 32px;
+
   color: var(--footer-text);
-  background: #4d5ae5;
+  background-color: var(--bgr-btn-color);
 }
 /* .card-img {
   position: relative;
@@ -588,16 +642,10 @@ img {
 .card-img:hover::before {
   opacity: 1;
 }
-.ooooo:hover .card-img::before {
+.card-img:hover .card-img::before {
   transform: translateY(0);
-}
-
-.texttt {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 } */
+
 /* --------------------------------- */
 .section-text {
   color: var(--main-color-text);
