@@ -192,9 +192,7 @@ img {
 .menu-header.activ {
   color: var(--pressed-state-color);
 }
-.menu-header.activ::after,
-.menu-header:hover::after,
-.menu-header:focus::after {
+.menu-header.activ::after {
   background-color: var(--pressed-state-color);
 }
 
@@ -640,13 +638,14 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-set-item:hover .overlay {
+.card-set-item:hover .overlay,
+.card-set-item:focus .overlay {
   transform: translateY(0);
 }
 .overlay-text {
   color: var(--footer-text);
 }
-/* -----------------overlay----------------- */
+/* -----------------/overlay----------------- */
 
 .section-text {
   color: var(--main-color-text);
