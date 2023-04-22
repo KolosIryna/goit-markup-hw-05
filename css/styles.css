@@ -638,10 +638,14 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-set-item:hover .overlay,
-.card-set-item:focus .overlay {
+.card-set-link:hover .overlay,
+.card-set-link:focus .overlay {
   transform: translateY(0);
 }
+
+/* .card-set-item:hover .overlay {
+  transform: translateY(0);
+} */
 .overlay-text {
   color: var(--footer-text);
 }
